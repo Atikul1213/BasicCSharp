@@ -12,28 +12,34 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+            var n = 4;
 
-            int[] number = new int[3] { 10, 20, 30 };
-            number[0] = 10;
-            number[1] = 20;
-            number[2] = 30;
+            if (n < 10)
+                Console.WriteLine("Less than 10");
 
-            foreach(var x in number)
+            else if (n == 10)
+                Console.WriteLine("number is 10");
+
+            else
+                Console.WriteLine("Greater than 10");
+
+
+            int res = (n < 10) ? -10 : 10;
+            Console.WriteLine("res: " + res);
+
+
+            int choice = 3;
+            switch (choice)
             {
-                Console.WriteLine("x : "+x);
+                case 1:
+                    Console.WriteLine(" Case 1");
+                    break;
+                case 3:
+                    Console.WriteLine("Case 3");
+                    break;
+
             }
 
-            var numbers = new int[] { 3, 7, 9, 10, 11, 12, 13 };
-
-            var len = numbers.Length;
-            var index = Array.IndexOf(numbers, 9);
-            Array.Clear(numbers, 0, 2);
-
-            int[] another = new int[3];
-            Array.Copy(numbers, another, 3);
-
-            Array.Sort(numbers);
-            Array.Reverse(numbers);
 
 
 
