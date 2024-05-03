@@ -12,38 +12,32 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            var fullName = "Atikul Islam ";
-            Console.WriteLine("Trim: '{0}'",fullName.Trim());
+            var sentence = "This is going to be a really really really really really really long test";
+            int MxLength = 20;
+            if(sentence.Length<MxLength)
+                Console.WriteLine(sentence);
+            else
+            {
+                var words = sentence.Split(' ');
+                var totalCharacter = 0;
 
-            Console.WriteLine("ToUpper: '{0}'",fullName.Trim().ToUpper());
+                var summaryWords = new List<string>();
 
-            var index = fullName.IndexOf(' ');
-            var firstName = fullName.Substring(0, index);
+                foreach(var word in words)
+                {
+                    totalCharacter += word.Length;
 
-            var lastName = fullName.Substring(index + 1);
+                    summaryWords.Add(word);
+                    if(totalCharacter > MxLength)
+                    {
+                        
+                        break;
+                    }
+                }
+                var summary = String.Join(" ", summaryWords) + "...";
+                Console.WriteLine("summary: "+summary);
 
-            Console.WriteLine("firstName: "+firstName);
-            Console.WriteLine("lastName: "+lastName);
-
-            var names = fullName.Split(' ');
-            Console.WriteLine("firstName: " + names[0]);
-            Console.WriteLine("LastName: " + names[1]);
-
-            var nname = fullName.Replace("Atikul", "Atik");
-            fullName.Replace(' ', '?');
-            Console.WriteLine("full Name: "+nname);
-
-            if(String.IsNullOrEmpty(" ".Trim()))
-                Console.WriteLine("Invalid");
-
-
-            if (String.IsNullOrWhiteSpace(" "))
-                Console.WriteLine("Invalid");
-
-
-            var num = Console.ReadLine();
-            int dec = Convert.ToInt32(num);
-            Console.WriteLine("dec: "+dec);
+            }
 
 
             Console.ReadLine();
