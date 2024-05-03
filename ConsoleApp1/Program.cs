@@ -11,32 +11,20 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            byte Num = 3;
-            int count = 10;
-            float totalPrice = 10.34f;
-            char character = 'A';
-            string firstName = "Atikul";
-            bool isWorking = true;
+            int n = 10;
+            double d = 5.25;
+            bool ck = true;
+            Console.WriteLine(Convert.ToString(n));
+            Console.WriteLine(Convert.ToDouble(n));
+            Console.WriteLine(Convert.ToInt32(n));
+            Console.WriteLine(Convert.ToString(ck));
 
+            
+             float f = 1.0f;
+            int i = (int)f;
 
-            Console.WriteLine("Hello World");
-            Console.WriteLine("Num: " + Num);
-            Console.WriteLine("count: " + count);
-            Console.WriteLine("totalPrice: " + totalPrice);
-            Console.WriteLine("Character: " + character);
-            Console.WriteLine("firstName: " + firstName);
-            Console.WriteLine("isWorking: " + isWorking);
-
-
-            var lastName = "Islam";     // Take any type of dataType
-            Console.WriteLine("LastName: " + lastName);
-
-            Console.WriteLine("{0} {1}", byte.MaxValue, byte.MinValue);
-
-
-            const float pi = 3.1416f;
-            Console.WriteLine("Constant: " + pi);
-
+            string s = "1";
+            int j = Convert.ToInt32(s);
             Console.ReadLine();
         }
     }
