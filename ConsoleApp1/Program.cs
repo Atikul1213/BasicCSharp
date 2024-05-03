@@ -12,20 +12,38 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            var timeSpan = new TimeSpan(1, 2, 3);
+            var fullName = "Atikul Islam ";
+            Console.WriteLine("Trim: '{0}'",fullName.Trim());
 
-            var minite = timeSpan.Minutes;
-            var totalMinute = timeSpan.TotalMinutes;
+            Console.WriteLine("ToUpper: '{0}'",fullName.Trim().ToUpper());
 
-            var timeSpan1 = new TimeSpan(1, 0, 0);
-            var timeSpan2 = TimeSpan.FromHours(1);
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
 
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
+            var lastName = fullName.Substring(index + 1);
 
-            var duration = end - start;
-            Console.WriteLine("duration: "+duration);
+            Console.WriteLine("firstName: "+firstName);
+            Console.WriteLine("lastName: "+lastName);
 
+            var names = fullName.Split(' ');
+            Console.WriteLine("firstName: " + names[0]);
+            Console.WriteLine("LastName: " + names[1]);
+
+            var nname = fullName.Replace("Atikul", "Atik");
+            fullName.Replace(' ', '?');
+            Console.WriteLine("full Name: "+nname);
+
+            if(String.IsNullOrEmpty(" ".Trim()))
+                Console.WriteLine("Invalid");
+
+
+            if (String.IsNullOrWhiteSpace(" "))
+                Console.WriteLine("Invalid");
+
+
+            var num = Console.ReadLine();
+            int dec = Convert.ToInt32(num);
+            Console.WriteLine("dec: "+dec);
 
 
             Console.ReadLine();
