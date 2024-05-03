@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Math;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,11 @@ namespace ConsoleApp1
         {
 
 
-            Person person = new Person();
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(10, 20);
 
-            person.firstName = "Atikul";
-            person.lastName = "Islam";
+            Console.WriteLine("Result: " + result);
 
-            person.Introduce();
 
             Console.ReadLine();
         }
