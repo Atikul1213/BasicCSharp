@@ -12,7 +12,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+            var numbers = new List<int>() { 1, 2 };
             var smallests = GetSmallests(numbers, 3);
 
             foreach(var num in smallests)
@@ -25,7 +25,7 @@ namespace ConsoleApp1
         {
             var smallests = new List<int>();
             
-            while(smallests.Count < count)
+            while(smallests.Count < count && list.Count>0)
             {
                 var min = GetSmallests(list);
                 smallests.Add(min);
