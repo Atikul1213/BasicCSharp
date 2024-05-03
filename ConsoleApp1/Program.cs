@@ -11,34 +11,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-            var n = 4;
-
-            if (n < 10)
-                Console.WriteLine("Less than 10");
-
-            else if (n == 10)
-                Console.WriteLine("number is 10");
-
-            else
-                Console.WriteLine("Greater than 10");
-
-
-            int res = (n < 10) ? -10 : 10;
-            Console.WriteLine("res: " + res);
-
-
-            int choice = 3;
-            switch (choice)
+            int n = 5;
+            int i = 0;
+            while (i < n)
             {
-                case 1:
-                    Console.WriteLine(" Case 1");
-                    break;
-                case 3:
-                    Console.WriteLine("Case 3");
-                    break;
-
+                Console.WriteLine(i);
+                i = i + 1;
             }
+
+            for (i = 0; i <= n; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            int[] number = new int[3] { 10, 20, 30 };
+
+            foreach (var num in number)
+                Console.WriteLine(num);
 
 
 
