@@ -12,32 +12,22 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            var sentence = "This is going to be a really really really really really really long test";
-            int MxLength = 20;
-            if(sentence.Length<MxLength)
-                Console.WriteLine(sentence);
-            else
-            {
-                var words = sentence.Split(' ');
-                var totalCharacter = 0;
+            var builder = new StringBuilder();
+            builder.Append('-', 10);
 
-                var summaryWords = new List<string>();
+            
+            builder.AppendLine();
+            builder.Append("Header");
+            builder.AppendLine();
+            builder.Append('-', 10);
 
-                foreach(var word in words)
-                {
-                    totalCharacter += word.Length;
+            Console.WriteLine(builder);
 
-                    summaryWords.Add(word);
-                    if(totalCharacter > MxLength)
-                    {
-                        
-                        break;
-                    }
-                }
-                var summary = String.Join(" ", summaryWords) + "...";
-                Console.WriteLine("summary: "+summary);
+            builder.Replace('-', '+');
+            builder.Remove(0, 10);
 
-            }
+            builder.Insert(0, new string('-', 10));
+            Console.WriteLine(builder);
 
 
             Console.ReadLine();
