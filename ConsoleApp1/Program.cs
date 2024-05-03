@@ -12,20 +12,19 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            var season = Season.Antumn;
-            switch (season)
-            {
-                case Season.Antumn:
-                    Console.WriteLine("It is antumn");
-                    break;
-                case Season.Spring:
-                    Console.WriteLine("it is Spring");
-                    break;
-                default:
-                    Console.WriteLine("It is other");
-                    break;
-            }
+            var timeSpan = new TimeSpan(1, 2, 3);
 
+            var minite = timeSpan.Minutes;
+            var totalMinute = timeSpan.TotalMinutes;
+
+            var timeSpan1 = new TimeSpan(1, 0, 0);
+            var timeSpan2 = TimeSpan.FromHours(1);
+
+            var start = DateTime.Now;
+            var end = DateTime.Now.AddMinutes(2);
+
+            var duration = end - start;
+            Console.WriteLine("duration: "+duration);
 
 
 
