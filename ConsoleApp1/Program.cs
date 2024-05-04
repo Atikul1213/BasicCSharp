@@ -15,31 +15,60 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            int num1 = AddInt(10, 20);
+            Car car = new Car();
+            car.model = "R15";
+            car.color = "Blue";
+            car.year = 2024;
+            car.ShowValue();
 
-            double num2 = AddDouble(23.33, 43.44);
+            Car carSec = new Car("Yeama","red",2023);
+            carSec.ShowValue();
 
-            Console.WriteLine("num1: "+num1);
-            Console.WriteLine("num2: "+num2);
+
 
 
             Console.ReadLine();
         }
-
-
-        static int AddInt(int x,int y)
-        {
-            return x + y;
-        }
-
-        static double AddDouble(double x,double y)
-        {
-            return x + y;
-        }
-
-
-        
+ 
     }
 
+
+    public class Car
+    {
+        public string model;
+        public string color;
+        public int year;
+        
+        public Car(string _model, string _color, int _year)
+        {
+            this.model = _model;
+            this.color = _color;
+            this.year = _year;
+        }
+        
+        public Car()
+        {
+            this.model = "Hunda";
+            this.color = "Green";
+            this.year = 2000;
+        }
+
+        public void SetValue(string _model, string _color, int _year)
+        {
+            this.model = _model;
+            this.color = _color;
+            this.year = _year;
+        }
+
+        public void ShowValue()
+        {
+            Console.WriteLine("Mode: " + model + "  color: " + color + "  Year: " + year);
+        }
+
+        public void Greeting()
+        {
+            Console.WriteLine("The car is going as fast as it can"); ;
+        }
+    }
      
 }
