@@ -14,76 +14,32 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            int[] arr = new int[] { 2, 0, 99, 1, 40, 3, 70, 23 };
 
-            SortArray<int> sortArray = new SortArray<int>();
-            sortArray.Bubblesort(arr);
+            int num1 = AddInt(10, 20);
 
-            foreach (var num in arr)
-            {
-                Console.WriteLine(num);
-            }
+            double num2 = AddDouble(23.33, 43.44);
 
-
-            
-            string[] name = new string[] { "sadikul","zahid", "ripa", "sadika", "atikul", "ismail" };
-            SortArray<string> sortName = new SortArray<string>();
-            sortName.Bubblesort(name);
-
-            foreach(string nam in name)
-            {
-                Console.WriteLine("name: " + nam);
-            }
-
-            
-
-            Employee[] Emparr = new Employee[4]
-            {
-                new Employee{Id=4, Name ="Zahid" },
-                new Employee{Id = 3, Name = "atikul" },
-                new Employee{Id = 1, Name = "sadika" },
-                new Employee{Id = 2, Name = "Ismail"}
-            };
-
-           // SortArray<Employee> empSort = new SortArray<Employee>();
-           // empSort.Bubblesort(Emparr);
-
-
+            Console.WriteLine("num1: "+num1);
+            Console.WriteLine("num2: "+num2);
 
 
             Console.ReadLine();
         }
+
+
+        static int AddInt(int x,int y)
+        {
+            return x + y;
+        }
+
+        static double AddDouble(double x,double y)
+        {
+            return x + y;
+        }
+
+
         
     }
 
-    public class Employee  
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-       
-         
-    }
-
-
-    public class SortArray<T> where T:IComparable
-    {
-        public void Bubblesort(T[] arr)
-        {
-            for(int i=0;i<arr.Length;i++)
-            {
-                for(int j = 1; j < arr.Length; j++)
-                {
-                    if (arr[j - 1].CompareTo(arr[j]) >0)
-                    {
-                        T temp = arr[j];
-                        arr[j] = arr[j-1];
-                        arr[j-1] = temp;
-                    }
-                }
-            }
-        }
-
-         
-    }
+     
 }
