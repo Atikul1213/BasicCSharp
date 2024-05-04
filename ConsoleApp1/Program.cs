@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,34 +14,76 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
+            int[] arr = new int[] { 2, 0, 99, 1, 40, 3, 70, 23 };
 
-            Salaries salaries = new Salaries();
+            SortArray<int> sortArray = new SortArray<int>();
+            sortArray.Bubblesort(arr);
 
-            ArrayList salarylist = salaries.GetSalaries();
+            foreach (var num in arr)
+            {
+                Console.WriteLine(num);
+            }
 
-            var salary = salarylist[0];
-            Console.WriteLine("salary: "+salary);
+
+            
+            string[] name = new string[] { "sadikul","zahid", "ripa", "sadika", "atikul", "ismail" };
+            SortArray<string> sortName = new SortArray<string>();
+            sortName.Bubblesort(name);
+
+            foreach(string nam in name)
+            {
+                Console.WriteLine("name: " + nam);
+            }
+
+            
+
+            Employee[] Emparr = new Employee[4]
+            {
+                new Employee{Id=4, Name ="Zahid" },
+                new Employee{Id = 3, Name = "atikul" },
+                new Employee{Id = 1, Name = "sadika" },
+                new Employee{Id = 2, Name = "Ismail"}
+            };
+
+           // SortArray<Employee> empSort = new SortArray<Employee>();
+           // empSort.Bubblesort(Emparr);
+
+
+
 
             Console.ReadLine();
         }
         
     }
 
-    public class Salaries
+    public class Employee  
     {
-        ArrayList _salaryList = new ArrayList();
+        public int Id { get; set; }
+        public string Name { get; set; }
 
-        public Salaries()
+       
+         
+    }
+
+
+    public class SortArray<T> where T:IComparable
+    {
+        public void Bubblesort(T[] arr)
         {
-            _salaryList.Add(34.45);
-            _salaryList.Add(34.45);
-            _salaryList.Add(34.45);
-            _salaryList.Add(34.45);
+            for(int i=0;i<arr.Length;i++)
+            {
+                for(int j = 1; j < arr.Length; j++)
+                {
+                    if (arr[j - 1].CompareTo(arr[j]) >0)
+                    {
+                        T temp = arr[j];
+                        arr[j] = arr[j-1];
+                        arr[j-1] = temp;
+                    }
+                }
+            }
         }
 
-        public ArrayList GetSalaries()
-        {
-            return _salaryList;
-        }
+         
     }
 }
