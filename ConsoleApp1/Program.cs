@@ -15,17 +15,17 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            Car car = new Car();
-            car.model = "R15";
-            car.color = "Blue";
-            car.year = 2024;
-            car.ShowValue();
+            Car car = new Car(100, "blue");
+            car.Print();
 
-            Car carSec = new Car("Yeama","red",2023);
-            carSec.ShowValue();
+            Bmw bmw = new Bmw(200, "Red", "R34");
+            bmw.Print();
+            bmw.Repair();
 
 
-
+            Audi audi = new Audi(300, "Yellow", "K322");
+            audi.Print();
+            audi.Repair();
 
             Console.ReadLine();
         }
@@ -35,40 +35,76 @@ namespace ConsoleApp1
 
     public class Car
     {
-        public string model;
-        public string color;
-        public int year;
-        
-        public Car(string _model, string _color, int _year)
+        public int hp { get; set; }
+        public string color { get; set; }
+
+        public Car(int _hp, string _color)
         {
-            this.model = _model;
+            this.hp = _hp;
             this.color = _color;
-            this.year = _year;
-        }
-        
-        public Car()
-        {
-            this.model = "Hunda";
-            this.color = "Green";
-            this.year = 2000;
         }
 
-        public void SetValue(string _model, string _color, int _year)
+        public virtual void Print()
         {
-            this.model = _model;
-            this.color = _color;
-            this.year = _year;
+            Console.WriteLine("Hp: "+hp+ " color: "+color);
         }
 
-        public void ShowValue()
+        public virtual void Repair()
         {
-            Console.WriteLine("Mode: " + model + "  color: " + color + "  Year: " + year);
+            Console.WriteLine("Car was repaired");
         }
 
-        public void Greeting()
+    }
+
+
+
+    class Bmw : Car
+    {
+        private string brand = "bmw";
+        public string Model { get; set; }
+
+        public Bmw(int _hp,string _color, string _Model):base(_hp,_color)
         {
-            Console.WriteLine("The car is going as fast as it can"); ;
+            this.Model = _Model;
+        }
+
+        public override void Print()
+        {
+            Console.WriteLine("Brand: "+brand+" Hp: "+hp+" color: "+color+" Model: "+Model);
+
+        }
+
+        public override void Repair()
+        {
+            Console.WriteLine("Bmw {0} car was repaired",brand);
         }
     }
+
+
+    class Audi : Car
+    {
+        private string brand = "Audi";
+        public string Model { get; set; }
+
+        public Audi(int _hp,string _color,string _Model) : base(_hp,_color)
+        {
+            this.Model = _Model;
+        }
+
+        public override void Print()
+        {
+            Console.WriteLine("Brand: "+brand+" Model: "+Model+" hp: "+hp+" color:"+color);
+
+        }
+
+        public override void Repair()
+        {
+            Console.WriteLine("Bmw{0} car was repaired",brand);
+        }
+    }
+
+
+
+
      
 }
