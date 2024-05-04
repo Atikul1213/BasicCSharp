@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1.Math;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,44 +11,36 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2 };
-            var smallests = GetSmallests(numbers, 3);
 
-            foreach(var num in smallests)
-                Console.WriteLine("num: "+num);
+            Salaries salaries = new Salaries();
+
+            ArrayList salarylist = salaries.GetSalaries();
+
+            var salary = salarylist[0];
+            Console.WriteLine("salary: "+salary);
 
             Console.ReadLine();
         }
-
-        public static List<int> GetSmallests(List<int>list,int count)
-        {
-            var smallests = new List<int>();
-            
-            while(smallests.Count < count && list.Count>0)
-            {
-                var min = GetSmallests(list);
-                smallests.Add(min);
-                list.Remove(min);
-            }
-            return smallests;
-        }
-
-        public static int GetSmallests(List<int> list)
-        {
-            var Min = list[0];
-            foreach(var x in list)
-            {
-                if (x < Min)
-                    Min = x;
-            }
-
-            return Min;
-        }
-
-
-
         
+    }
+
+    public class Salaries
+    {
+        ArrayList _salaryList = new ArrayList();
+
+        public Salaries()
+        {
+            _salaryList.Add(34.45);
+            _salaryList.Add(34.45);
+            _salaryList.Add(34.45);
+            _salaryList.Add(34.45);
+        }
+
+        public ArrayList GetSalaries()
+        {
+            return _salaryList;
+        }
     }
 }
