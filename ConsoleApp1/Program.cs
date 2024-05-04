@@ -15,9 +15,21 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            Pig myPig = new Pig();
-            myPig.animalSound();
-            myPig.sleep();
+            try
+            {
+                int[] myNumber = new int[]{ 1, 2, 3 };
+                Console.WriteLine(myNumber[10]);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Something went wrong.");
+            }
+
+            finally
+            {
+                Console.WriteLine("The try catch is finished");
+            }
+
 
             Console.ReadLine();
         }
@@ -25,25 +37,5 @@ namespace ConsoleApp1
     }
 
 
-     public abstract class Animal
-    {
-        public abstract void animalSound();
-
-        public void sleep()
-        {
-            Console.WriteLine("Zzz");
-        }
-    }
-
-     public class Pig : Animal
-    {
-        public override void animalSound()
-        {
-            Console.WriteLine("The pig say: wee wee");
-        }
-    }
-
-
-
-     
+  
 }
