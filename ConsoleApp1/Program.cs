@@ -15,21 +15,9 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            try
-            {
-                int[] myNumber = new int[]{ 1, 2, 3 };
-                Console.WriteLine(myNumber[10]);
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine("Something went wrong.");
-            }
+            Person person = new Person("Atikul", "Islam", "Atik");
 
-            finally
-            {
-                Console.WriteLine("The try catch is finished");
-            }
-
+            Console.WriteLine("Full Name: " + person.GetFullName()); ;
 
             Console.ReadLine();
         }
