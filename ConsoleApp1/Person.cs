@@ -13,6 +13,23 @@ namespace ConsoleApp1
         private string middleName;
         private string Id;
         
+        public string FirstName
+        {
+            get { return firstName; }
+            set { firstName = value; }
+        }
+
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+
+        public string MiddleName {
+            get { return middleName; }
+            set { middleName = value; }
+        }
+
         public Person()
         {
             Id = "001";    
@@ -30,12 +47,12 @@ namespace ConsoleApp1
 
         public Person(string _firstName, string _middleName, string _lastName) :this(_firstName,_lastName)
         {
-            this.middleName = _middleName;
+            this.MiddleName = _middleName;
         }
 
         public string GetFullName()
         {
-            return firstName +" "+ middleName +" "+ lastName;
+            return firstName +" "+ MiddleName +" "+ lastName;
         }
 
 

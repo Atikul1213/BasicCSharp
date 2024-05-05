@@ -17,6 +17,7 @@ namespace ConsoleApp1
 
             Person person = new Person("Atikul", "Islam", "Atik");
 
+            person.FirstName = "Islamil";
             Console.WriteLine("Full Name: " + person.GetFullName()); ;
 
             Console.ReadLine();
