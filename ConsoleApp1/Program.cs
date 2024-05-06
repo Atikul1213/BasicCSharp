@@ -12,39 +12,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2 };
-            var smallests = GetSmallests(numbers, 3);
+            Stack<string> stack = new Stack<string>();
 
-            foreach(var num in smallests)
-                Console.WriteLine("num: "+num);
+            stack.Push("Rare");
+            stack.Push("Medium Rear");
+            stack.Push("Atikul");
+            stack.Push("Ismail");
+            stack.Push("Mominul");
 
+            foreach (var x in stack)
+            {
+                Console.WriteLine("value: " + x);
+            }
             Console.ReadLine();
         }
 
-        public static List<int> GetSmallests(List<int>list,int count)
-        {
-            var smallests = new List<int>();
-            
-            while(smallests.Count < count && list.Count>0)
-            {
-                var min = GetSmallests(list);
-                smallests.Add(min);
-                list.Remove(min);
-            }
-            return smallests;
-        }
-
-        public static int GetSmallests(List<int> list)
-        {
-            var Min = list[0];
-            foreach(var x in list)
-            {
-                if (x < Min)
-                    Min = x;
-            }
-
-            return Min;
-        }
+         
 
 
 
