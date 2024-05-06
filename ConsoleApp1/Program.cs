@@ -15,25 +15,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            ArrayList arrlist = new ArrayList();
+            Hashtable menu = new Hashtable();
 
-            arrlist.Add(30);
-            arrlist.Add(20);
+            menu.Add(1, "Sadikul");
+            menu.Add(4, "Atikul");
+            menu.Add(3, "Ismail");
+            menu.Add(2, "Atik");
 
-            string str = "Like Share subscrible";
-            int x = 11;
-            DateTime d = DateTime.Now;
-
-            arrlist.Add(str);
-            arrlist.Add(x);
-            arrlist.Add(d);
-
-
-            foreach(var obj in arrlist)
+            foreach(DictionaryEntry kvp in menu)
             {
-                Console.WriteLine("Obj: "+obj);
+                Console.WriteLine("Key: "+kvp.Key+"  Value: "+kvp.Value);
             }
-
 
 
             Console.ReadLine();
