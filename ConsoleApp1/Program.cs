@@ -15,10 +15,18 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            Person person = new Person("Atikul", "Islam", "Atik");
+            Dictionary<int, string> dict = new Dictionary<int, string>();
 
-            person.FirstName = "Islamil";
-            Console.WriteLine("Full Name: " + person.GetFullName()); ;
+            dict.Add(1, "Atikul");
+            dict.Add(3, "Ismail");
+            dict.Add(4, "Mominul");
+            dict.Add(2, "Atik");
+
+            foreach(var kvp in dict)
+            {
+                Console.WriteLine("Key: " + kvp.Key + " Value: " + kvp.Value); ;
+            }
+
 
             Console.ReadLine();
         }
