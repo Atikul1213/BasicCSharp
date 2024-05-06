@@ -15,14 +15,14 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            Dictionary<int, string> dict = new Dictionary<int, string>();
+            SortedList<int, string> slist = new SortedList<int, string>();
 
-            dict.Add(1, "Atikul");
-            dict.Add(3, "Ismail");
-            dict.Add(4, "Mominul");
-            dict.Add(2, "Atik");
+            slist.Add(1, "Atikul");
+            slist.Add(3, "Atik");
+            slist.Add(4, "Mominul");
+            slist.Add(2, "Ismail");
 
-            foreach(var kvp in dict)
+            foreach(var kvp in slist)
             {
                 Console.WriteLine("Key: " + kvp.Key + " Value: " + kvp.Value); ;
             }
