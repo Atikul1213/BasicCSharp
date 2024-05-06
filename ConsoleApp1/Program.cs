@@ -15,18 +15,19 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            SortedList slist = new SortedList();
+            Stack stack = new Stack();
 
-            slist.Add(2, "Atikul");
-            slist.Add(4, "Ismail");
-            slist.Add(1, "Atik");
-            slist.Add(3, "Mominul");
-            
+            stack.Push("Rare");
+            stack.Push("Medium Rear");
+            stack.Push("Atikul");
+            stack.Push("Ismail");
+            stack.Push("Mominul");
 
-            foreach(DictionaryEntry d in slist)
+            foreach (var x in stack)
             {
-                Console.WriteLine("Key: "+d.Key+"  value: "+d.Value);
+                Console.WriteLine("value: " + x);
             }
+
 
 
             Console.ReadLine();
