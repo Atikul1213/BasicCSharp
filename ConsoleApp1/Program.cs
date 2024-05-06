@@ -15,16 +15,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Hashtable menu = new Hashtable();
+            SortedList slist = new SortedList();
 
-            menu.Add(1, "Sadikul");
-            menu.Add(4, "Atikul");
-            menu.Add(3, "Ismail");
-            menu.Add(2, "Atik");
+            slist.Add(2, "Atikul");
+            slist.Add(4, "Ismail");
+            slist.Add(1, "Atik");
+            slist.Add(3, "Mominul");
+            
 
-            foreach(DictionaryEntry kvp in menu)
+            foreach(DictionaryEntry d in slist)
             {
-                Console.WriteLine("Key: "+kvp.Key+"  Value: "+kvp.Value);
+                Console.WriteLine("Key: "+d.Key+"  value: "+d.Value);
             }
 
 
