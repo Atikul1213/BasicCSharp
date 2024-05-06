@@ -1,6 +1,8 @@
 ﻿using ConsoleApp1.Math;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,23 +14,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Queue<string> queue = new Queue<string>();
 
-            queue.Enqueue("Mark");
-            queue.Enqueue("Atikul");
-            queue.Enqueue("Ismail");
-            queue.Enqueue("Mominul");
-            queue.Enqueue("Alamin");
+            ArrayList arrlist = new ArrayList();
+
+            arrlist.Add(30);
+            arrlist.Add(20);
+
+            string str = "Like Share subscrible";
+            int x = 11;
+            DateTime d = DateTime.Now;
+
+            arrlist.Add(str);
+            arrlist.Add(x);
+            arrlist.Add(d);
 
 
-            var str = queue.Dequeue();
-            Console.WriteLine("str: "+str);
-            Console.WriteLine("Peek: " + queue.Peek());
-
-            foreach(var x  in queue)
+            foreach(var obj in arrlist)
             {
-                Console.WriteLine("value: "+x);
+                Console.WriteLine("Obj: "+obj);
             }
+
+
 
             Console.ReadLine();
         }
