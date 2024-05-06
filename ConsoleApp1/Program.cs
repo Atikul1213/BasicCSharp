@@ -12,18 +12,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Stack<string> stack = new Stack<string>();
+            Queue<string> queue = new Queue<string>();
 
-            stack.Push("Rare");
-            stack.Push("Medium Rear");
-            stack.Push("Atikul");
-            stack.Push("Ismail");
-            stack.Push("Mominul");
+            queue.Enqueue("Mark");
+            queue.Enqueue("Atikul");
+            queue.Enqueue("Ismail");
+            queue.Enqueue("Mominul");
+            queue.Enqueue("Alamin");
 
-            foreach (var x in stack)
+
+            var str = queue.Dequeue();
+            Console.WriteLine("str: "+str);
+            Console.WriteLine("Peek: " + queue.Peek());
+
+            foreach(var x  in queue)
             {
-                Console.WriteLine("value: " + x);
+                Console.WriteLine("value: "+x);
             }
+
             Console.ReadLine();
         }
 
