@@ -15,18 +15,24 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Stack stack = new Stack();
+            Queue  queue = new Queue();
 
-            stack.Push("Rare");
-            stack.Push("Medium Rear");
-            stack.Push("Atikul");
-            stack.Push("Ismail");
-            stack.Push("Mominul");
+            queue.Enqueue("Mark");
+            queue.Enqueue("Atikul");
+            queue.Enqueue("Ismail");
+            queue.Enqueue("Mominul");
+            queue.Enqueue("Alamin");
 
-            foreach (var x in stack)
+
+            var str = queue.Dequeue();
+            Console.WriteLine("str: " + str);
+            Console.WriteLine("Peek: " + queue.Peek());
+
+            foreach (var x in queue)
             {
                 Console.WriteLine("value: " + x);
             }
+
 
 
 
