@@ -49,11 +49,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WarehouseManagementSystemAPI\WarehouseManagementSystemAPI.csproj">
-      <Project>{9e62d98d-3e51-4a6e-8a08-33c508b96b20}</Project>
-      <Name>WarehouseManagementSystemAPI</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

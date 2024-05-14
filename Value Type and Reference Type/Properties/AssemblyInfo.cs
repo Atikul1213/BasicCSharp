@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WarehouseManagementSystemAPI")]
+[assembly: AssemblyTitle("Value Type and Reference Type")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("WarehouseManagementSystemAPI")]
+[assembly: AssemblyProduct("Value Type and Reference Type")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9e62d98d-3e51-4a6e-8a08-33c508b96b20")]
+[assembly: Guid("86f2c1fd-29bc-4faa-a015-93b288613825")]
 
 // Version information for an assembly consists of the following four values:
 //
