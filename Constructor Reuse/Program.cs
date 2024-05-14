@@ -11,6 +11,7 @@ namespace Constructor_Reuse
         static void Main(string[] args)
         {
             Person person = new Person("Atikul", "Islam", "Atik");
+            person.FristName = "Who is he: ";
             Console.WriteLine(person.GetFullName());
         }
     }
@@ -21,6 +22,21 @@ namespace Constructor_Reuse
         private string lastName;
         private string middleName;
         private string Id;
+        // Property
+        public string FristName
+        {
+            get { return firstName; }
+            set { firstName = value; }
+        }
+
+
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+
+
 
         public string GetFirstName()
         {
