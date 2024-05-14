@@ -20,7 +20,7 @@ namespace Value_Type_and_Reference_Type
 
             int num = 20;
 
-            int value = RetRef(ref num);
+            int value = Increase(ref num);
 
             Console.WriteLine("num: " + num);
 
@@ -45,7 +45,7 @@ namespace Value_Type_and_Reference_Type
         }
 
 
-        public static int RetRef(ref int value)
+        public static int Increase(ref int value)
         {
             value = value + 10;
             return value;

@@ -22,6 +22,16 @@ namespace Constructor_Reuse
         private string middleName;
         private string Id;
 
+        public string GetFirstName()
+        {
+            return firstName;
+        }
+
+        public void SetFirstName(string _firstName)
+        {
+            this.firstName = _firstName; 
+        }
+
         public Person()
         {
             Id = "001";
