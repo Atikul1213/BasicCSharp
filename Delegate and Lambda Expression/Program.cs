@@ -94,6 +94,29 @@ namespace Delegate_and_Lambda_Expression
 
             Console.WriteLine("prd: "+prd.Id);
 
+
+
+            // LINK
+
+            var fetchproduct = from p in products
+                               where p.Id >= 1 && p.Id <= 100
+                               select p;
+
+            foreach(var x in fetchproduct)
+            {
+                Console.WriteLine("FetchData: "+x.Id);
+            }
+
+
+            // another way
+            var fetchproduct1 = products.Where(u => u.Id >= 1 && u.Id <= 100);
+
+            foreach (var x in fetchproduct1)
+            {
+                Console.WriteLine("FetchData1: " + x.Id);
+            }
+
+
         }
 
 
