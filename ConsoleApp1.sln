@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface and Inheritance",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Null Operator", "Null Operator\Null Operator.csproj", "{FAB6BE3C-E079-4A92-9597-B1024D52A3A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate and Lambda Expression", "Delegate and Lambda Expression\Delegate and Lambda Expression.csproj", "{96EE6936-69FB-42E7-A429-B44910EEAC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{FAB6BE3C-E079-4A92-9597-B1024D52A3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAB6BE3C-E079-4A92-9597-B1024D52A3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAB6BE3C-E079-4A92-9597-B1024D52A3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
