@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Null Operator", "Null Opera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate and Lambda Expression", "Delegate and Lambda Expression\Delegate and Lambda Expression.csproj", "{96EE6936-69FB-42E7-A429-B44910EEAC51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension Method", "Extension Method\Extension Method.csproj", "{2CCE0DD8-1A8C-43AF-94AF-D069415AAD1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96EE6936-69FB-42E7-A429-B44910EEAC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCE0DD8-1A8C-43AF-94AF-D069415AAD1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCE0DD8-1A8C-43AF-94AF-D069415AAD1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCE0DD8-1A8C-43AF-94AF-D069415AAD1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCE0DD8-1A8C-43AF-94AF-D069415AAD1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
