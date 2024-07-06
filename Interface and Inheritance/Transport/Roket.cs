@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inheritance.SuperHero
+namespace Inheritance.Transport
 {
-    public class Ironman : IFlyable
+    public class Roket : IFlyable
     {
         public string Fly()
         {
-            return "Ironman can fly";
-        } 
+            return "Roket is Flying";
+        }
     }
 }

@@ -8,6 +8,11 @@ namespace Inheritance
 {
     public class Tiger : Animal
     {
+        public override string Move()
+        {
+            return "by walking";
+        }
+
         public override string Speak()
         {
             return "Halum Halum";

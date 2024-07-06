@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace Inheritance
 {
-    public class Animal
+    public abstract class Animal
     {
         public virtual string Speak()
         {
             return "Animal is speaking";
         }
 
-        public string Move()
-        {
-            return "Animal is moving";
-        }
+        public abstract string Move();
 
 
         public string Eat()

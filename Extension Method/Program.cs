@@ -19,7 +19,7 @@ namespace Extension_Method
 
             int res1 = calculator.Multiply(3, 66);
             Console.WriteLine(res1);
-
+             
 
         }
     }

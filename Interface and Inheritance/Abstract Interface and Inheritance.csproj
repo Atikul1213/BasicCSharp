@@ -52,6 +52,7 @@
     <Compile Include="SuperHero\Ironman.cs" />
     <Compile Include="SuperHero\Superman.cs" />
     <Compile Include="Tiger.cs" />
+    <Compile Include="Transport\Roket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,10 +10,15 @@ namespace Inheritance.SuperHero
     public class Superman : Animal, IFlyable
     {
 
-        public string Fly()
+        public new string Fly()
         {
+             
             return "Superman is Flying";
         }
 
+        public override string Move()
+        {
+            return "Move by leg";
+        }
     }
 }

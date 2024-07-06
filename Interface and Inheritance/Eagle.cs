@@ -19,6 +19,10 @@ namespace Inheritance
             return "Eagle is flying";
         }
 
+        public override string Move()
+        {
+            return "Move by wings";
+        }
 
         public override  string Speak()
         {

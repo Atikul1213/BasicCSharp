@@ -9,9 +9,14 @@ namespace Inheritance
 {
     public class Parrot : Animal,  IFlyable
     {
-        public string Fly()
+        public new string Fly()
         {
             return "Parrot is flying";
+        }
+
+        public override string Move()
+        {
+            return "Move by wings in air";
         }
     }
 }
