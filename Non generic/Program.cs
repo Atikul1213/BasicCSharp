@@ -33,6 +33,8 @@ namespace Non_generic
             stack.Push("Atikul");
             stack.Push("Ismail");
             stack.Push("Mominul");
+            stack.Pop();
+           
 
             foreach (var x in stack)
             {

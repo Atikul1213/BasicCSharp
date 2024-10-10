@@ -15,7 +15,7 @@ namespace Inheritance
         {
 
 
-            /**
+      
             Animal animal = new Animal();
 
             Console.WriteLine("Eat: "+animal.Eat());
@@ -49,7 +49,7 @@ namespace Inheritance
             {
                 Console.WriteLine(var.Speak());
             }
-            */
+            
 
 
             // Interface using 

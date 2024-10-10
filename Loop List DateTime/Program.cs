@@ -64,6 +64,7 @@ namespace Loop_List_DateTime
             Console.WriteLine(now.ToShortTimeString());
             Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
 
+            Console.ReadLine();
 
         }
     }
