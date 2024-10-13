@@ -45,7 +45,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract Interface and Inhe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "Practice\Practice.csproj", "{A336E4E2-536B-4889-9727-4C32806B815F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic Structure of C#", "Basic Structure of C#\Basic Structure of C#.csproj", "{DC390D27-39C7-4CA7-950C-4C342839FB60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic Structure of C#", "Basic Structure of C#\Basic Structure of C#.csproj", "{DC390D27-39C7-4CA7-950C-4C342839FB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataType", "DataType\DataType.csproj", "{BF69ECFD-1D4E-4152-B722-81D1E87F6687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{DC390D27-39C7-4CA7-950C-4C342839FB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC390D27-39C7-4CA7-950C-4C342839FB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC390D27-39C7-4CA7-950C-4C342839FB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF69ECFD-1D4E-4152-B722-81D1E87F6687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF69ECFD-1D4E-4152-B722-81D1E87F6687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF69ECFD-1D4E-4152-B722-81D1E87F6687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF69ECFD-1D4E-4152-B722-81D1E87F6687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
