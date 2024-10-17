@@ -24,3 +24,14 @@ st2.Increment();
 st2.Display();
 
 
+Child cld = new Child("Atikul");
+
+
+Console.WriteLine("From static class: " + Test.GetSquare(10));
+
+
+Singleton fromPlace1 = Singleton.GetSingletonInstance();
+fromPlace1.SomeMethod("From place 1");
+
+Singleton fromPlace2 = Singleton.GetSingletonInstance();
+fromPlace2.SomeMethod("from place 2");
