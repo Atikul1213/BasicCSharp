@@ -2,9 +2,13 @@
 {
     public class AccessDemo
     {
+        private int test;
+
         private void Demo()
         {
             PrivateDemo();
+            AccessDemo demo = new AccessDemo();
+
         }
 
         private void PrivateDemo()
