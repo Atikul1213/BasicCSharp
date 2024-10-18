@@ -49,7 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic Structure of C#", "Ba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataType", "DataType\DataType.csproj", "{BF69ECFD-1D4E-4152-B722-81D1E87F6687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyContructor", "CopyContructor\CopyContructor.csproj", "{59D2F534-02C7-4330-A92D-7E33ABA9557E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyContructor", "CopyContructor\CopyContructor.csproj", "{59D2F534-02C7-4330-A92D-7E33ABA9557E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibrary", "DemoLibrary\DemoLibrary.csproj", "{EF0C4923-4B81-475C-9088-B705075DB3F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{921B47B6-C533-4881-A41F-1D37BE5A3583}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccessModifier", "AccessModifier", "{37E5824A-AA14-4049-A924-7DBAC9C9485B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,9 +159,21 @@ Global
 		{59D2F534-02C7-4330-A92D-7E33ABA9557E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59D2F534-02C7-4330-A92D-7E33ABA9557E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59D2F534-02C7-4330-A92D-7E33ABA9557E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0C4923-4B81-475C-9088-B705075DB3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0C4923-4B81-475C-9088-B705075DB3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0C4923-4B81-475C-9088-B705075DB3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0C4923-4B81-475C-9088-B705075DB3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{921B47B6-C533-4881-A41F-1D37BE5A3583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921B47B6-C533-4881-A41F-1D37BE5A3583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921B47B6-C533-4881-A41F-1D37BE5A3583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921B47B6-C533-4881-A41F-1D37BE5A3583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF0C4923-4B81-475C-9088-B705075DB3F4} = {37E5824A-AA14-4049-A924-7DBAC9C9485B}
+		{921B47B6-C533-4881-A41F-1D37BE5A3583} = {37E5824A-AA14-4049-A924-7DBAC9C9485B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26399F14-942D-4294-8C15-4298CAAB368F}
