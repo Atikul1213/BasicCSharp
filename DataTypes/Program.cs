@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataTypes
 {
@@ -10,6 +6,7 @@ namespace DataTypes
     {
         static void Main(string[] args)
         {
+
 
             byte Num = 3;
             int count = 10;
@@ -36,6 +33,17 @@ namespace DataTypes
 
             const float pi = 3.1416f;
             Console.WriteLine("Constant: " + pi);
+
+            string line = "Atikul , Islam, true";
+            var vals = line.Split(',');
+
+            string fName = vals[0];
+            string lName = vals[1];
+            bool active = bool.Parse(vals[2]);
+
+            Console.WriteLine("FirstName: " + fName);
+            Console.WriteLine("LastName: " + lName);
+            Console.WriteLine("Active: " + active);
 
             Console.ReadLine();
         }

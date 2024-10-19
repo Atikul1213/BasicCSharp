@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inheritance_and_Virtual_Class
 {
@@ -21,6 +17,8 @@ namespace Inheritance_and_Virtual_Class
             Audi audi = new Audi(300, "Yellow", "K322");
             audi.Print();
             audi.Repair();
+
+            A3 a3 = new A3(100, "White", "d33");
         }
     }
 
@@ -46,11 +44,13 @@ namespace Inheritance_and_Virtual_Class
             Console.WriteLine("Car was repaired");
         }
 
+
+
     }
 
 
 
-    class Bmw : Car
+    public class Bmw : Car
     {
         private string brand = "bmw";
         public string Model { get; set; }
@@ -66,14 +66,15 @@ namespace Inheritance_and_Virtual_Class
 
         }
 
-        public override void Repair()
+        public sealed override void Repair()
         {
             Console.WriteLine("Bmw {0} car was repaired", brand);
         }
+
     }
 
 
-    class Audi : Car
+    public class Audi : Car
     {
         private string brand = "Audi";
         public string Model { get; set; }
@@ -93,6 +94,22 @@ namespace Inheritance_and_Virtual_Class
         {
             Console.WriteLine("Bmw{0} car was repaired", brand);
         }
+    }
+
+
+
+    public sealed class A3 : Bmw
+    {
+
+        public A3(int hp, string color, string model) : base(hp, color, model)
+        {
+
+        }
+
+        //public override void Repair()
+        //{
+        //    Console.WriteLine("A3 class is repaired");
+        //}
     }
 
 }

@@ -1,24 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Delegate_and_Lambda_Expression
 {
     internal class Program
     {
-
+        // Define Delegate  <summary>
+        // Access modifier delegate keyword return type DelegateName (parameters)
         delegate int AddHandler(int num1, int num2);
 
+        public delegate void RectDelegate(double x, double y);
         static void Main(string[] args)
         {
 
+            AddHandler addNums = new AddHandler(Add);
+            var res = addNums(10, 20);
+            Console.WriteLine("res: " + res);
+
+            Rectangle rect = new Rectangle();
+            RectDelegate rectDelegate = new RectDelegate(rect.GetArea);
+            rectDelegate += rect.GetPerimeter;
+
+            rectDelegate.Invoke(10, 20);
 
             //AddHandler addhandle = Add;
             AddHandler addhandle = Multiply;
             int result = addhandle(3, 9);
-            Console.WriteLine("res: "+result);
+            Console.WriteLine("res: " + result);
 
 
             // Shortcut way
@@ -62,7 +71,7 @@ namespace Delegate_and_Lambda_Expression
             // Lamda expression
             Func<int, int, int> addhandle6 = (int x, int y) => x + y;
 
-            Console.WriteLine("lamda: "+addhandle6(49,4));
+            Console.WriteLine("lamda: " + addhandle6(49, 4));
 
 
 
@@ -83,16 +92,16 @@ namespace Delegate_and_Lambda_Expression
 
 
 
-            foreach(Product var in products)
+            foreach (Product var in products)
             {
-                Console.WriteLine("Id: "+var.Id + " Name: "+var.Name);
+                Console.WriteLine("Id: " + var.Id + " Name: " + var.Name);
             }
 
 
             int id = 2;
             var prd = products.FirstOrDefault(u => u.Id == id);
 
-            Console.WriteLine("prd: "+prd.Id);
+            Console.WriteLine("prd: " + prd.Id);
 
 
 
@@ -102,9 +111,9 @@ namespace Delegate_and_Lambda_Expression
                                where p.Id >= 1 && p.Id <= 100
                                select p;
 
-            foreach(var x in fetchproduct)
+            foreach (var x in fetchproduct)
             {
-                Console.WriteLine("FetchData: "+x.Id);
+                Console.WriteLine("FetchData: " + x.Id);
             }
 
 
@@ -128,7 +137,7 @@ namespace Delegate_and_Lambda_Expression
             return fnum + snum;
         }
 
-        public static int Multiply(int fnum,int snum)
+        public static int Multiply(int fnum, int snum)
         {
             return fnum * snum;
         }
