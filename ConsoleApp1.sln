@@ -57,13 +57,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccessModifier", "AccessModifier", "{37E5824A-AA14-4049-A924-7DBAC9C9485B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumberDemo", "RandomNumberDemo\RandomNumberDemo.csproj", "{478EFD57-E50F-4FC2-BCD9-43249D408BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomNumberDemo", "RandomNumberDemo\RandomNumberDemo.csproj", "{478EFD57-E50F-4FC2-BCD9-43249D408BBA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{60EA367F-5628-4A23-ACCD-098B7551DC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLibraryInterface", "DemoLibraryInterface\DemoLibraryInterface.csproj", "{28742452-A77B-4C5B-8600-E581B6A1F31E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibraryInterface", "DemoLibraryInterface\DemoLibraryInterface.csproj", "{28742452-A77B-4C5B-8600-E581B6A1F31E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUIInterface", "ConsoleUIInterface\ConsoleUIInterface.csproj", "{4ED12452-AB6F-4359-8D85-7B5A345988FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUIInterface", "ConsoleUIInterface\ConsoleUIInterface.csproj", "{4ED12452-AB6F-4359-8D85-7B5A345988FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractDemo", "AbstractDemo\AbstractDemo.csproj", "{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -187,6 +187,10 @@ Global
 		{4ED12452-AB6F-4359-8D85-7B5A345988FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ED12452-AB6F-4359-8D85-7B5A345988FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ED12452-AB6F-4359-8D85-7B5A345988FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
