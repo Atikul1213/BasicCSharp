@@ -63,11 +63,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLibraryInterface", "Dem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUIInterface", "ConsoleUIInterface\ConsoleUIInterface.csproj", "{4ED12452-AB6F-4359-8D85-7B5A345988FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractDemo", "AbstractDemo\AbstractDemo.csproj", "{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractDemo", "AbstractDemo\AbstractDemo.csproj", "{1FE195C4-3E7D-4585-8E08-FB84EE54B63D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericDemo", "GenericDemo\GenericDemo.csproj", "{B720665D-10D1-4FF4-B73D-9E7B8E8FD935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDemo", "GenericDemo\GenericDemo.csproj", "{B720665D-10D1-4FF4-B73D-9E7B8E8FD935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertiesGetterSetter", "PropertiesGetterSetter\PropertiesGetterSetter.csproj", "{B82EA797-6649-447E-937F-3DEE1B9B7041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertiesGetterSetter", "PropertiesGetterSetter\PropertiesGetterSetter.csproj", "{B82EA797-6649-447E-937F-3DEE1B9B7041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{6B7FBB82-A0D6-4042-8276-B02ED9139C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegate", "MulticastDelegate\MulticastDelegate.csproj", "{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -203,6 +207,14 @@ Global
 		{B82EA797-6649-447E-937F-3DEE1B9B7041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B82EA797-6649-447E-937F-3DEE1B9B7041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B82EA797-6649-447E-937F-3DEE1B9B7041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7FBB82-A0D6-4042-8276-B02ED9139C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7FBB82-A0D6-4042-8276-B02ED9139C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7FBB82-A0D6-4042-8276-B02ED9139C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7FBB82-A0D6-4042-8276-B02ED9139C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
