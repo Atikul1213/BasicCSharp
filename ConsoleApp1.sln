@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegate", "MulticastDelegate\MulticastDelegate.csproj", "{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutParameter", "OutParameter\OutParameter.csproj", "{4314F06A-9CA5-4927-90EC-91DF5C6907FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,10 @@ Global
 		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
