@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TypeConversion
 {
@@ -10,7 +6,13 @@ namespace TypeConversion
     {
         static void Main(string[] args)
         {
+            string str = "Atikul Islam from Brain Station";
+            var temp = str.WordCount();
 
+            Console.WriteLine("custom extension: " + temp);
+
+            var upperLetter = str.UpperAll();
+            Console.WriteLine("Extension by upper all: " + upperLetter);
 
             int n = 10;
             double d = 5.25;
