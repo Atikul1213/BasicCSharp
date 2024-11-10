@@ -69,11 +69,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDemo", "GenericDemo\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertiesGetterSetter", "PropertiesGetterSetter\PropertiesGetterSetter.csproj", "{B82EA797-6649-447E-937F-3DEE1B9B7041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{6B7FBB82-A0D6-4042-8276-B02ED9139C31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{6B7FBB82-A0D6-4042-8276-B02ED9139C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegate", "MulticastDelegate\MulticastDelegate.csproj", "{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegate", "MulticastDelegate\MulticastDelegate.csproj", "{590C90D1-FCA4-4DF4-894D-1E81D53A6D76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutParameter", "OutParameter\OutParameter.csproj", "{4314F06A-9CA5-4927-90EC-91DF5C6907FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutParameter", "OutParameter\OutParameter.csproj", "{4314F06A-9CA5-4927-90EC-91DF5C6907FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SRPDemo", "SRPDemo\SRPDemo.csproj", "{2009FC47-15C1-4A8F-9064-DF663739DB03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCP Demo", "OCP Demo\OCP Demo.csproj", "{4C83E2AE-9272-4E69-8340-77481184EC62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -221,6 +225,14 @@ Global
 		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4314F06A-9CA5-4927-90EC-91DF5C6907FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2009FC47-15C1-4A8F-9064-DF663739DB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2009FC47-15C1-4A8F-9064-DF663739DB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2009FC47-15C1-4A8F-9064-DF663739DB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2009FC47-15C1-4A8F-9064-DF663739DB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C83E2AE-9272-4E69-8340-77481184EC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C83E2AE-9272-4E69-8340-77481184EC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C83E2AE-9272-4E69-8340-77481184EC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C83E2AE-9272-4E69-8340-77481184EC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
