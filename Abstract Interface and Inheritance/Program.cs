@@ -3,9 +3,6 @@ using Inheritance.SuperHero;
 using Inheritance.Transport;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inheritance
 {
@@ -15,10 +12,10 @@ namespace Inheritance
         {
 
 
-      
-            Animal animal = new Animal();
 
-            Console.WriteLine("Eat: "+animal.Eat());
+            //Animal animal = new Animal();
+
+            //Console.WriteLine("Eat: "+animal.Eat());
 
 
             Eagle eagle = new Eagle();
@@ -45,17 +42,17 @@ namespace Inheritance
             zoo.Add(new Eagle());
 
 
-            foreach(Animal var in zoo)
+            foreach (Animal var in zoo)
             {
                 Console.WriteLine(var.Speak());
             }
-            
+
 
 
             // Interface using 
 
             IFlyable flyobj = new Eagle();
-            
+
 
             Console.WriteLine(flyobj.Fly());
 
@@ -67,7 +64,7 @@ namespace Inheritance
             flst.Add(new Ironman());
             flst.Add(new Roket());
 
-            foreach(IFlyable fobj in flst)
+            foreach (IFlyable fobj in flst)
             {
                 Console.WriteLine(fobj.Fly());
             }
