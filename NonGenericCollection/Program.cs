@@ -16,12 +16,33 @@ public class GenericCollection
         alist.Add(str);
         alist.Add(x);
         alist.Add(dt);
-
+        alist.Add(true);
+        alist.Add(null);
+        alist.Insert(0, "FirstElement");
+        alist.Sort();
         foreach (var item in alist)
         {
             Console.WriteLine("Arraylist value: " + item);
         }
 
+        for (int i = 0; i < alist.Count; i++)
+        {
+            Console.WriteLine("arraylist: " + alist[i]);
+        }
+
+        ArrayList alist2 = new ArrayList()
+        {
+            "atikul",
+            "sadikul"
+        };
+
+        ArrayList cloneAlist = (ArrayList)alist.Clone();
+
+        alist.InsertRange(0, alist2);
+        alist.RemoveAt(1);
+        alist.RemoveRange(0, 2);
+        alist.Contains("atikul");
+        alist.Clear();
 
 
         // HashTable 
