@@ -6,6 +6,7 @@
         {
             var sqlConnectionString = new SqlConnectionString();
             sqlConnectionString.Connection();
+            Console.ReadLine();
         }
 
     }
