@@ -18,6 +18,10 @@ namespace SQLConnectionADO
                 // Another way
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
+                    Console.WriteLine("Fields count: " + dr.FieldCount);
+                    Console.WriteLine("Has row: " + dr.HasRows);
+                    Console.WriteLine("Is Closed: " + dr.IsClosed);
+
                     while (dr.Read())
                     {
                         Console.WriteLine("Id " + dr["id"] + " Name: " + dr["name"] + " Fee: " + dr["fee"]);
