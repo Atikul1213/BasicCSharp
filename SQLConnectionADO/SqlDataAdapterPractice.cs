@@ -8,6 +8,8 @@ namespace SQLConnectionADO
 
         public void DataAdapter()
         {
+            //  string connectionString = "Server=LAPTOP-6P5NK25R\\SQLSERVER2022DEV;Database=StudentDB;Trusted_Connection=True;TrustServerCertificate=True;";
+
             string cs = "Data Source = BS-01344; Initial Catalog = AspnetB11; Integrated Security = true";
             SqlConnection con = null;
 

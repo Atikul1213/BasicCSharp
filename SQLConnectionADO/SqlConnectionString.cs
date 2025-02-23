@@ -36,8 +36,8 @@ namespace SQLConnectionADO
                     // Store procedure read from db
                     string query1 = "spGetCourseInfo";  // Give Stored procedure name
                     SqlCommand cmd1 = new SqlCommand(query, con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    SqlDataReader dr1 = cmd.ExecuteReader();
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader dr1 = cmd1.ExecuteReader();
 
 
                     // Insert Into the database
@@ -49,7 +49,7 @@ namespace SQLConnectionADO
                     cmd3.Parameters.AddWithValue("@id", id);
                     cmd3.Parameters.AddWithValue("@name", name);
                     cmd3.Parameters.AddWithValue("@fee", fee);
-                    var insertRowCount = cmd.ExecuteNonQuery();
+                    var insertRowCount = cmd3.ExecuteNonQuery();
                     if (insertRowCount > 0)
                     {
                         Console.WriteLine("Data has been inserted successfully " + insertRowCount);
@@ -92,6 +92,17 @@ namespace SQLConnectionADO
                     else
                     {
                         Console.WriteLine("Data Deletation failed");
+                    }
+
+
+
+                    // Get Specific record
+                    string query6 = "select* from Course1 where id = '1'";
+                    SqlCommand cmd6 = new SqlCommand(query6, con);
+                    SqlDataReader dr6 = cmd6.ExecuteReader();
+                    while (dr6.Read())
+                    {
+                        Console.WriteLine("Id: " + dr["Id"] + " Name: " + dr["Name"] + "Fee: " + dr["Fee"]);
                     }
 
                 }
