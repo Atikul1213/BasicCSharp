@@ -32,12 +32,63 @@ namespace SQLConnectionADO
                     cmd.CommandText = query;
                     cmd.Connection = con;
 
+                    string countQuery = "select count(*) from Courses1";
+                    using (SqlCommand cmd8 = new SqlCommand(countQuery, con))
+                    {
+                        int count = (int)cmd8.ExecuteScalar();
+                        Console.WriteLine("Total count: " + count);
+                    }
+
+
 
                     // Store procedure read from db
                     string query1 = "spGetCourseInfo";  // Give Stored procedure name
                     SqlCommand cmd1 = new SqlCommand(query, con);
                     cmd1.CommandType = CommandType.StoredProcedure;
                     SqlDataReader dr1 = cmd1.ExecuteReader();
+
+
+                    int courseId = 1;
+                    string query10 = "GetCourseById";
+                    SqlCommand cmd10 = new SqlCommand(query10, con);
+                    cmd10.CommandType = CommandType.StoredProcedure;
+                    cmd10.Parameters.Add(new SqlParameter("@Id", courseId));
+
+                    /* 
+                     CREATE PROCEDURE CreateProduct
+                        @ProductName VARCHAR(255),
+                        @Price DECIMAL(10, 2),
+                        @Quantity INT,
+                        @NewProductId INT OUTPUT
+                    AS
+                    BEGIN
+                        INSERT INTO Product (ProductName, Price, Quantity)
+                        VALUES (@ProductName, @Price, @Quantity);
+    
+                        SET @NewProductId = SCOPE_IDENTITY();
+                    END
+                     */
+
+                    String productName = "NewProduct";
+                    decimal price = 99.99M;
+                    int quantity = 12;
+                    var query11 = "CreateProduct";
+
+                    SqlCommand cmd11 = new SqlCommand(query11, con);
+                    cmd11.CommandType = CommandType.StoredProcedure;
+                    cmd11.Parameters.AddWithValue("@ProductName", productName);
+                    cmd11.Parameters.AddWithValue("@Price", price);
+                    cmd11.Parameters.AddWithValue("@Quantity", quantity);
+
+                    SqlParameter newProdcutIdParam = new SqlParameter("@NewProductId", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd11.Parameters.Add(newProdcutIdParam);
+
+                    cmd11.ExecuteNonQuery();
+                    int newProductId = (int)newProdcutIdParam.Value;
+
 
 
                     // Insert Into the database
@@ -103,6 +154,39 @@ namespace SQLConnectionADO
                     while (dr6.Read())
                     {
                         Console.WriteLine("Id: " + dr["Id"] + " Name: " + dr["Name"] + "Fee: " + dr["Fee"]);
+                    }
+
+
+                    // Step 1: Start a SQL transaction.
+                    using (SqlTransaction transaction = con.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Step 2: Create and Execute a SqlCommand
+                            string cmdText = @"INSERT INTO Employee (FirstName, LastName, Email, Position, Salary) VALUES (@FirstName, @LastName, @Email, @Position, @Salary)";
+                            using (SqlCommand command = new SqlCommand(cmdText, con, transaction))
+                            {
+                                // Add parameters to prevent SQL injection
+                                command.Parameters.AddWithValue("@FirstName", "Rakesh");
+                                command.Parameters.AddWithValue("@LastName", "Sharma");
+                                command.Parameters.AddWithValue("@Email", "Rakesh@Example.com");
+                                command.Parameters.AddWithValue("@Position", "DBA");
+                                command.Parameters.AddWithValue("@Salary", 10000);
+                                // Execute the command
+                                int result = command.ExecuteNonQuery();
+                                Console.WriteLine("Rows affected: " + result);
+                                // Step 3: Commit the Transaction
+                                transaction.Commit();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("An exception occurred. Transaction rolled back.");
+                            Console.WriteLine(ex.Message);
+                            // Rollback the transaction in case of an error
+                            transaction.Rollback();
+                        }
+
                     }
 
                 }

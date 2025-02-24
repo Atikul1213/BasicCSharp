@@ -26,7 +26,31 @@ namespace SQLConnectionADO
                     {
                         Console.WriteLine("Id " + dr["id"] + " Name: " + dr["name"] + " Fee: " + dr["fee"]);
                         Console.WriteLine("Id " + dr[0] + " Name: " + dr[1] + " Fee: " + dr[2]);
+
+                        var id = (int)dr["id"];
+                        var name = dr["name"].ToString();
+                        var fee = (decimal)dr["fee"];
                     }
+
+
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            for (int i = 0; i < dr.FieldCount; i++)
+                            {
+                                string dataType = dr.GetDataTypeName(i);
+                                string columnName = dr.GetName(i);
+
+                                object value = dr.GetValue(i);
+
+                            }
+                        }
+
+                        dr.Close();
+
+                    }
+
                 }
 
                 con.Close();
