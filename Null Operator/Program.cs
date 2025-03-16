@@ -1,9 +1,6 @@
 ﻿using Null_Operator.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Null_Operator
 {
@@ -42,19 +39,26 @@ namespace Null_Operator
             };
 
 
-            foreach(Product prd in products)
+            foreach (Product prd in products)
             {
-                Console.WriteLine("Id: "+prd.Id+" Name: "+prd.Name+" Price"+prd.Price+ " product Tye: "+prd.ProductType);
+                Console.WriteLine("Id: " + prd.Id + " Name: " + prd.Name + " Price" + prd.Price + " product Tye: " + prd.ProductType);
 
             }
 
-
             // Null handle
-            Console.WriteLine(product?.RelatedProduct?.Name?? "N/A");
+            Console.WriteLine(product?.RelatedProduct?.Name ?? "N/A");
 
 
             product.RelatedProduct = product;
             Console.WriteLine(product.RelatedProduct.Name);
+
+
+            // Another example
+            int? age = null;
+
+            //age ??= 20;
+            if (age == null)
+                age = 20;
 
         }
     }
