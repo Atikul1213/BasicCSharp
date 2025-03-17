@@ -13,7 +13,6 @@ namespace Delegate_and_Lambda_Expression
         public delegate void RectDelegate(double x, double y);
         static void Main(string[] args)
         {
-
             AddHandler addNums = new AddHandler(Add);
             var res = addNums(10, 20);
             Console.WriteLine("res: " + res);
@@ -29,13 +28,11 @@ namespace Delegate_and_Lambda_Expression
             int result = addhandle(3, 9);
             Console.WriteLine("res: " + result);
 
-
             // Shortcut way
             AddHandler addhandle1 = delegate (int num1, int num2)
             {
                 return num1 + num2;
             };
-
 
             // another way , it has return type
             Func<int, int, int> addhandle2 = delegate (int num1, int num2)
@@ -48,8 +45,6 @@ namespace Delegate_and_Lambda_Expression
                 return 20;
             };
 
-
-
             // Action has no return type
             Action addHandle4 = delegate ()
             {
@@ -57,23 +52,16 @@ namespace Delegate_and_Lambda_Expression
             };
 
             addHandle4();
-
             Action<int, string> addHandle5 = delegate (int num, string name)
             {
                 Console.WriteLine("num: " + num + " name: " + name);
             };
-
-
             addHandle5(20, "Atikul");
-
-
 
             // Lamda expression
             Func<int, int, int> addhandle6 = (int x, int y) => x + y;
 
             Console.WriteLine("lamda: " + addhandle6(49, 4));
-
-
 
             List<Product> products = new List<Product>()
             {
@@ -82,7 +70,6 @@ namespace Delegate_and_Lambda_Expression
                     Id = 1,
                     Name = "Laptop"
                 },
-
                 new Product()
                 {
                     Id = 2,
@@ -90,23 +77,17 @@ namespace Delegate_and_Lambda_Expression
                 }
             };
 
-
-
             foreach (Product var in products)
             {
                 Console.WriteLine("Id: " + var.Id + " Name: " + var.Name);
             }
-
 
             int id = 2;
             var prd = products.FirstOrDefault(u => u.Id == id);
 
             Console.WriteLine("prd: " + prd.Id);
 
-
-
             // LINK
-
             var fetchproduct = from p in products
                                where p.Id >= 1 && p.Id <= 100
                                select p;
@@ -116,7 +97,6 @@ namespace Delegate_and_Lambda_Expression
                 Console.WriteLine("FetchData: " + x.Id);
             }
 
-
             // another way
             var fetchproduct1 = products.Where(u => u.Id >= 1 && u.Id <= 100);
 
@@ -124,24 +104,14 @@ namespace Delegate_and_Lambda_Expression
             {
                 Console.WriteLine("FetchData1: " + x.Id);
             }
-
-
         }
-
-
-
-
         static int Add(int fnum, int snum)
         {
-
             return fnum + snum;
         }
-
         public static int Multiply(int fnum, int snum)
         {
             return fnum * snum;
         }
-
-
     }
 }
