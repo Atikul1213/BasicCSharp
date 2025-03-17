@@ -1,10 +1,6 @@
 ﻿using Extension_Method.Extension;
 using Extension_Method.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Extension_Method
 {
@@ -19,8 +15,10 @@ namespace Extension_Method
 
             int res1 = calculator.Multiply(3, 66);
             Console.WriteLine(res1);
-             
 
+            string myWord = "Welcome to Dotnet Tutorials Extension Methods Article";
+            int wordCount = myWord.GetWordCount();
+            Console.WriteLine("Word count: " + wordCount);
         }
     }
 }
