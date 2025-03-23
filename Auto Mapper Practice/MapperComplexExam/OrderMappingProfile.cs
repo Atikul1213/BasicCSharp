@@ -33,6 +33,16 @@ namespace Auto_Mapper_Practice.MapperComplexExam
 
 
             CreateMap<OrderItemCreateDTO, OrderItem>();
+
+
+            CreateMap<UserCreateDTO, User>()
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => new AddressOuter
+                {
+                    Street = src.Street,
+                    City = src.City,
+                    State = src.State,
+                    ZipCode = src.ZipCode
+                }));
         }
     }
 }
