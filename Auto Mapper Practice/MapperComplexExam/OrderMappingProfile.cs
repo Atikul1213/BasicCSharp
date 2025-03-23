@@ -22,7 +22,17 @@ namespace Auto_Mapper_Practice.MapperComplexExam
 
             CreateMap<OrderItem, OrderItemDTO>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
-                .ForMember(dest => dest.ProductPrice, opt => opt.MapFrom(src => src.Product.Price));
+                .ForMember(dest => dest.ProductPrice, opt => opt.MapFrom(src => src.Product.Price))
+                .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(src => src.Product.Price * src.Quantity));
+
+
+            CreateMap<OrderrCreateDTO, Order>()
+                .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(src => DateTime.Now))
+                .ForMember(dest => dest.Amount, opt => opt.Ignore())
+                .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.Items));
+
+
+            CreateMap<OrderItemCreateDTO, OrderItem>();
         }
     }
 }
