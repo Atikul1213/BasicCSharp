@@ -9,8 +9,6 @@ namespace ConsoleUI
             ProtectedDemo();
             ProtectedInternalDemo();
             PublicDemo();
-
-
         }
     }
 }

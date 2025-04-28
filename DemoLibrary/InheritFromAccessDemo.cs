@@ -9,7 +9,6 @@
             PrivateProtectedDemo();
             ProtectedInternalDemo();
             PublicDemo();
-
         }
     }
 }

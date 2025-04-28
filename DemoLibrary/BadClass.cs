@@ -3,22 +3,18 @@
     public class BadClass
     {
         private string CreditCardNumber { get; set; }
-
         public string _CreditCardNumber
         {
             get
             {
                 return CreditCardNumber;
             }
-
             set
             {
                 CreditCardNumber = value;
             }
         }
-
         private int Age;
-
         public int _Age
         {
             get { return Age; }
@@ -30,6 +26,5 @@
                     Age = 0;
             }
         }
-
     }
 }

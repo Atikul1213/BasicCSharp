@@ -47,6 +47,5 @@ namespace ConsoleUIInterface
             output.Add(new CourseProductModel() { Title = ".Net coure start tot finish" });
             return output;
         }
-
     }
 }
