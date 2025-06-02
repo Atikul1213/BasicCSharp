@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuples\Tuples.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchExpression", "SwitchExpression\SwitchExpression.csproj", "{08907F67-C4D5-4DEC-BB7A-B20E444F1198}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSendMessage", "AWSSendMessage\AWSSendMessage.csproj", "{20FF9A84-D3C5-4568-A268-84343E4A2FFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,10 @@ Global
 		{08907F67-C4D5-4DEC-BB7A-B20E444F1198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08907F67-C4D5-4DEC-BB7A-B20E444F1198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08907F67-C4D5-4DEC-BB7A-B20E444F1198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FF9A84-D3C5-4568-A268-84343E4A2FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FF9A84-D3C5-4568-A268-84343E4A2FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FF9A84-D3C5-4568-A268-84343E4A2FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FF9A84-D3C5-4568-A268-84343E4A2FFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
